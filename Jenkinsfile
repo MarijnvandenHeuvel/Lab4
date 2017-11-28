@@ -2,9 +2,7 @@ node() {
     stage('Build') {
       milestone()
       checkout scm
-        dir('Lab4'){
             sh './gradlew compileJava'
-        }
     }
 
     stage('Testing') {
