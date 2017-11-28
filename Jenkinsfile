@@ -8,6 +8,7 @@ node() {
 
     stage('Testing') {
         milestone()
-        sh './gradlew test'
+        sh './gradlew clean test'
+        junit 'build/test-results/**/*.xml'
     }
 }
