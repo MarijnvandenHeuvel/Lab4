@@ -5,7 +5,7 @@ stage('Build') {
   }
 }
 
-stage('Test') {
+stage('Testing') {
   milestone()
   node {
     echo "Testing"
