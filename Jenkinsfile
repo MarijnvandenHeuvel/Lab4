@@ -1,14 +1,14 @@
 stage('Build') {
   milestone()
   node {
-    sh "gradlew clean build"
+    echo "Building"
   }
 }
 
 stage('Testing') {
   milestone()
   node {
-    gradlew test
+    echo "Testing"
   }
 }
 
