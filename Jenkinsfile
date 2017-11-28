@@ -1,14 +1,14 @@
 stage('Build') {
   milestone()
   node {
-    echo "Building"
+    build
   }
 }
 
 stage('Testing') {
   milestone()
   node {
-    echo "Testing"
+    test
   }
 }
 
