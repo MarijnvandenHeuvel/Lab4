@@ -1,7 +1,7 @@
 stage('Build') {
   milestone()
   node {
-    sh('./gradlew compileJava')
+    sh './gradlew compileJava'
   }
 }
 
