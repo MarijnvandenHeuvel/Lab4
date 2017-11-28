@@ -1,7 +1,9 @@
 node {
     stage('Build') {
       milestone()
+      dir ('Lab4') {
       sh './gradlew compileJava'
+    }
     }
 
     stage('Testing') {
