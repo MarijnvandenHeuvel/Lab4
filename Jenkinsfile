@@ -1,14 +1,14 @@
 stage('Build') {
   milestone()
   node {
-    echo "Building"
+    sh './gradlew compileJava'
   }
 }
 
 stage('Testing') {
   milestone()
   node {
-    echo "Testing"
+    sh './gradlew test'
   }
 }
 
