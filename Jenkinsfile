@@ -1,19 +1,23 @@
-node {
+
     stage('Build') {
       milestone()
-      dir ('Lab4') {
-      sh './gradlew compileJava'
-    }
+      node {
+       bat(/"gradlew\bin\gradle" clean build/)
+      }
     }
 
     stage('Testing') {
       milestone()
-      sh './gradlew test'
+      node {
+         sh './gradlew test'
+      }
     }
 
     stage('Deploy') {
       input "Deploy?"
       milestone()
-      echo "Deploying"
+      node {
+        echo "Deploying"
+      }
+
     }
-}
