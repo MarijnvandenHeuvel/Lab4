@@ -2,7 +2,7 @@
     stage('Build') {
       milestone()
       node {
-       bat(/"gradlew\bin\gradle" clean build/)
+        sh './gradlew compileJava'
       }
     }
 
