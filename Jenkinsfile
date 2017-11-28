@@ -1,7 +1,7 @@
 stage('Build') {
   milestone()
   node {
-    gradlew clean build
+    sh "./gradlew clean build"
   }
 }
 
