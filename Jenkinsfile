@@ -1,16 +1,14 @@
 stage('Build') {
   milestone()
   node {
-    def gradleHome = tool 'gradlew'
-    bat(/"${gradleHome}\bin\gradle" clean build/)
+    gradlew clean build
   }
 }
 
 stage('Testing') {
   milestone()
   node {
-    def gradleHome = tool 'gradlew'
-    bat(/"${gradleHome}\bin\gradle" clean test/)
+    gradlew test
   }
 }
 
